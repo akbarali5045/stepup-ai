@@ -1,0 +1,1190 @@
+<!doctype html>
+
+<html class="light" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>StepUp | The Future of Motion</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@600;700;800&amp;family=Inter:wght@400;600&amp;display=swap"
+      rel="stylesheet"
+    />
+    <!-- Material Symbols -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <!-- Design System Config -->
+    <script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "on-secondary-container": "#616363",
+              "inverse-surface": "#213145",
+              "surface-container-low": "#eff4ff",
+              "secondary-fixed": "#e2e2e2",
+              "on-primary": "#ffffff",
+              secondary: "#5d5f5f",
+              "on-secondary-fixed-variant": "#454747",
+              "secondary-container": "#dfe0e0",
+              outline: "#7e7576",
+              "tertiary-fixed": "#ffdbcc",
+              "primary-fixed": "#e2e2e2",
+              "on-tertiary": "#ffffff",
+              "on-error": "#ffffff",
+              "on-surface": "#0b1c30",
+              "on-error-container": "#93000a",
+              "on-primary-fixed-variant": "#474747",
+              "surface-variant": "#d3e4fe",
+              "secondary-fixed-dim": "#c6c6c7",
+              "surface-container-lowest": "#ffffff",
+              "surface-dim": "#cbdbf5",
+              "primary-fixed-dim": "#c6c6c6",
+              "on-secondary": "#ffffff",
+              "surface-container-high": "#dce9ff",
+              "surface-container": "#e5eeff",
+              "surface-container-highest": "#d3e4fe",
+              "error-container": "#ffdad6",
+              "surface-tint": "#5e5e5e",
+              "surface-bright": "#f8f9ff",
+              "on-primary-fixed": "#1b1b1b",
+              "on-background": "#0b1c30",
+              "inverse-on-surface": "#eaf1ff",
+              "tertiary-container": "#351000",
+              "primary-container": "#1b1b1b",
+              primary: "#000000",
+              "on-secondary-fixed": "#1a1c1c",
+              tertiary: "#000000",
+              background: "#f8f9ff",
+              "on-tertiary-container": "#dd5c00",
+              "on-surface-variant": "#4c4546",
+              "tertiary-fixed-dim": "#ffb693",
+              "on-tertiary-fixed-variant": "#7a3000",
+              error: "#ba1a1a",
+              surface: "#f8f9ff",
+              "outline-variant": "#cfc4c5",
+              "inverse-primary": "#c6c6c6",
+              "on-tertiary-fixed": "#351000",
+              "on-primary-container": "#848484",
+            },
+            borderRadius: {
+              DEFAULT: "0.25rem",
+              lg: "0.5rem",
+              xl: "0.75rem",
+              full: "9999px",
+            },
+            spacing: {
+              margin_mobile: "20px",
+              margin_desktop: "64px",
+              unit: "4px",
+              sm: "8px",
+              xl: "48px",
+              gutter: "24px",
+              lg: "24px",
+              xs: "4px",
+              grid_columns: "12",
+              md: "16px",
+            },
+            fontFamily: {
+              "headline-lg-mobile": ["Hanken Grotesk"],
+              "headline-md": ["Hanken Grotesk"],
+              "body-md": ["Inter"],
+              "headline-lg": ["Hanken Grotesk"],
+              "display-xl": ["Hanken Grotesk"],
+              "body-lg": ["Inter"],
+              "label-md": ["Inter"],
+            },
+            fontSize: {
+              "headline-lg-mobile": [
+                "32px",
+                {
+                  lineHeight: "38px",
+                  letterSpacing: "-0.02em",
+                  fontWeight: "700",
+                },
+              ],
+              "headline-md": [
+                "24px",
+                {
+                  lineHeight: "32px",
+                  letterSpacing: "-0.01em",
+                  fontWeight: "600",
+                },
+              ],
+              "body-md": ["16px", { lineHeight: "24px", fontWeight: "400" }],
+              "headline-lg": [
+                "40px",
+                {
+                  lineHeight: "48px",
+                  letterSpacing: "-0.02em",
+                  fontWeight: "700",
+                },
+              ],
+              "display-xl": [
+                "72px",
+                {
+                  lineHeight: "76px",
+                  letterSpacing: "-0.04em",
+                  fontWeight: "800",
+                },
+              ],
+              "body-lg": ["18px", { lineHeight: "28px", fontWeight: "400" }],
+              "label-md": [
+                "14px",
+                {
+                  lineHeight: "20px",
+                  letterSpacing: "0.05em",
+                  fontWeight: "600",
+                },
+              ],
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      .material-symbols-outlined {
+        font-variation-settings:
+          "FILL" 0,
+          "wght" 400,
+          "GRAD" 0,
+          "opsz" 24;
+        display: inline-block;
+        line-height: 1;
+      }
+      .hero-gradient {
+        background: linear-gradient(
+          to right,
+          rgba(0, 0, 0, 0.8) 0%,
+          rgba(0, 0, 0, 0) 60%
+        );
+      }
+      .ai-glow {
+        box-shadow: 0 0 20px rgba(255, 107, 0, 0.15);
+      }
+      @keyframes scroll {
+        0% {
+          transform: translateX(0);
+        }
+        100% {
+          transform: translateX(-50%);
+        }
+      }
+      .animate-scroll {
+        animation: scroll 30s linear infinite;
+      }
+      .no-scrollbar::-webkit-scrollbar {
+        display: none;
+      }
+      .no-scrollbar {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+      }
+    </style>
+  </head>
+  <body
+    class="bg-surface text-on-surface selection:bg-on-tertiary-container selection:text-white overflow-x-hidden"
+  >
+    <!-- Announcement Bar -->
+    <div
+      class="bg-primary text-on-primary py-2 px-margin_desktop text-center font-label-md text-label-md uppercase tracking-widest z-[60] relative"
+    >
+      Limited Time: Extra 20% off all AI-matched trainers. Use code
+      <span class="text-on-tertiary-container font-bold">SPEED20</span>
+    </div>
+    <!-- TopNavBar (Shared Component) -->
+    <nav
+      class="fixed top-0 w-full z-50 h-[72px] bg-surface/90 dark:bg-surface/90 backdrop-blur-md border-b border-outline-variant/30 shadow-sm flex justify-between items-center px-margin_desktop max-w-full mx-auto mt-[36px]"
+    >
+      <div class="flex items-center gap-xl">
+        <a
+          class="font-display-xl text-headline-md font-black tracking-tighter text-primary dark:text-on-primary-fixed"
+          href="#"
+          >StepUp</a
+        >
+        <div class="hidden md:flex gap-lg items-center">
+          <a
+            class="font-label-md text-label-md uppercase tracking-wider text-primary dark:text-on-primary-fixed border-b-2 border-primary pb-1"
+            href="#"
+            >Men</a
+          >
+          <a
+            class="font-label-md text-label-md uppercase tracking-wider text-on-secondary-container dark:text-on-secondary-fixed-variant hover:text-primary transition-colors"
+            href="#"
+            >Women</a
+          >
+          <a
+            class="font-label-md text-label-md uppercase tracking-wider text-on-secondary-container dark:text-on-secondary-fixed-variant hover:text-primary transition-colors"
+            href="#"
+            >Kids</a
+          >
+          <a
+            class="font-label-md text-label-md uppercase tracking-wider text-on-secondary-container dark:text-on-secondary-fixed-variant hover:text-primary transition-colors"
+            href="#"
+            >Sports</a
+          >
+          <a
+            class="font-label-md text-label-md uppercase tracking-wider text-on-secondary-container dark:text-on-secondary-fixed-variant hover:text-primary transition-colors"
+            href="#"
+            >Sale 🔥</a
+          >
+          <a
+            class="font-label-md text-label-md uppercase tracking-wider text-on-tertiary-container dark:text-on-tertiary-fixed-variant hover:opacity-80 transition-opacity font-bold"
+            href="#"
+            >AI Finder ✨</a
+          >
+        </div>
+      </div>
+      <div class="flex items-center gap-md">
+        <div class="relative hidden lg:block">
+          <input
+            class="bg-transparent border-b border-outline-variant/50 focus:border-primary outline-none py-1 px-2 font-body-md text-body-md w-48 transition-all focus:w-64"
+            placeholder="Search products..."
+            type="text"
+          />
+          <span
+            class="material-symbols-outlined absolute right-2 top-1 text-on-surface-variant"
+            >search</span
+          >
+        </div>
+        <button class="hover:opacity-80 active:scale-95 transition-all">
+          <span class="material-symbols-outlined">favorite</span>
+        </button>
+        <button class="hover:opacity-80 active:scale-95 transition-all">
+          <span class="material-symbols-outlined">shopping_bag</span>
+        </button>
+        <button class="hover:opacity-80 active:scale-95 transition-all">
+          <span class="material-symbols-outlined">person</span>
+        </button>
+      </div>
+    </nav>
+    <!-- Hero Slider -->
+    <section class="relative h-[90vh] w-full overflow-hidden pt-[72px]">
+      <div
+        class="flex h-full transition-transform duration-700 ease-in-out w-[300%]"
+        id="hero-container"
+      >
+        <!-- Slide 1 -->
+        <div class="w-1/3 h-full relative flex items-center px-margin_desktop">
+          <div class="absolute inset-0 z-0">
+            <div
+              class="w-full h-full bg-cover bg-center"
+              data-alt="A cinematic, high-end lifestyle photograph of a professional runner in mid-stride on a minimalist concrete track. The lighting is crisp morning sunlight, creating long shadows and highlighting the technical textures of the neon-accented black performance trainers. The atmosphere is powerful and focused, using a high-contrast black and white palette with vibrant orange pops."
+              style="
+                background-image: url(&quot;https://lh3.googleusercontent.com/aida-public/AB6AXuAZnKquZoZx6Vuk6oIoakqEbIoxCrkg6asucxU7ThiqsyZLyk-_R-tmiT_Ha_diC0PyqRXkQ6vVOEYk0j1dWtuffJABJRb3UNGZ9G5aJyI5bhtQqK7dMFJb4YZSj5xjsmMf6_QaOp2Pees-NGrltTDaWg9oZwJk6NQwdQPduPVwpVesCClMT8u6BfGnY45J4aWcXJBjlJ-M8BLkwik4YOSy3JYEO8jzqbzrKQrWjcG84j0mOWcGK-JP&quot;);
+              "
+            ></div>
+            <div class="absolute inset-0 hero-gradient"></div>
+          </div>
+          <div class="relative z-10 max-w-2xl text-white">
+            <h1 class="font-display-xl text-display-xl mb-md">
+              The Future of Motion
+            </h1>
+            <p class="font-body-lg text-body-lg mb-xl opacity-90">
+              Engineered for elite performance. Experience the next generation
+              of running technology.
+            </p>
+            <button
+              class="bg-white text-black px-xl py-4 rounded-lg font-label-md text-label-md uppercase tracking-widest hover:bg-on-secondary-fixed transition-colors active:scale-95"
+            >
+              Shop Now
+            </button>
+          </div>
+        </div>
+        <!-- Slide 2 -->
+        <div class="w-1/3 h-full relative flex items-center px-margin_desktop">
+          <div class="absolute inset-0 z-0">
+            <div
+              class="w-full h-full bg-cover bg-center"
+              data-alt="A futuristic, high-tech laboratory setting where a sleek sneaker is being scanned by orange laser beams. The environment is dark and clinical with cool blue and silver tones, contrasted by the warm glow of the AI fitting technology. Floating holographic data points surround the shoe, emphasizing precision engineering and artificial intelligence."
+              style="
+                background-image: url(&quot;https://lh3.googleusercontent.com/aida-public/AB6AXuBn-b5xNo9J9kVgrsWUQmo-l3JYmId99e1gs5NRlpQlwh0Uzzvfcvj9tKL3s8gfwZbwaJceD3iweF24nYsNl5klTNxghJLNcMGBXB1Qg1QfCTCZsj6185nn19xc5Vtlni6jXl5DmW8_-LF1JLK_aRrSSCqZLEswtvQ_c6yb_qOHji4H0-6JH-yf3Hu9NA0jdEZL7fIQNRTRd9TZhuHjpAPIAF5PSJx__KnkZOH5uSRkETmHmSww3n2u&quot;);
+              "
+            ></div>
+            <div class="absolute inset-0 bg-black/40"></div>
+          </div>
+          <div class="relative z-10 max-w-2xl text-white">
+            <h1 class="font-display-xl text-display-xl mb-md">
+              Perfect Fit, Guaranteed
+            </h1>
+            <p class="font-body-lg text-body-lg mb-xl opacity-90">
+              Our proprietary AI analyzes your gait and arch to find your
+              absolute perfect match.
+            </p>
+            <button
+              class="bg-gradient-to-r from-[#FF6B00] to-[#FF8C33] text-white px-xl py-4 rounded-lg font-label-md text-label-md uppercase tracking-widest shadow-[0_10px_25px_-5px_rgba(255,107,0,0.3)] hover:scale-105 transition-transform active:scale-95 flex items-center gap-2"
+            >
+              <span
+                class="material-symbols-outlined text-[20px]"
+                style="font-variation-settings: &quot;FILL&quot; 1"
+                >auto_awesome</span
+              >
+              Find My Shoes with AI
+            </button>
+          </div>
+        </div>
+        <!-- Slide 3 -->
+        <div class="w-1/3 h-full relative flex items-center px-margin_desktop">
+          <div class="absolute inset-0 z-0">
+            <div
+              class="w-full h-full bg-cover bg-center"
+              data-alt="A moody, urban luxury scene in a metropolitan setting at dusk. A person stands on a wet asphalt street reflecting city lights, wearing high-end streetwear and premium designer trainers. The lighting is high-contrast with deep blacks and sharp highlights, evoking a sense of exclusivity and sophisticated street style."
+              style="
+                background-image: url(&quot;https://lh3.googleusercontent.com/aida-public/AB6AXuCPEZVRwW6n3xNfRw3Doiw2-h1bwyRKVxoUhd-2d8umUoyTSB56jQWO3cOYh-JAasOnMGJZzVavIGHw4ivLxGHqGjtPixlPcf_GQ-rJc_Q-LQ9emDNl1A6r3_z9bXi5FIkn7vJC61cgPQxNzWYmTCDzEyy4PSQEc6vwZPIKBWCEHbP2_M1aZU1Zo0rr1ft4b5UOqsT0iBnb-jkMEOLkXv7nQI5g3CE1HLpXXWq7ruhDHE3JQkwfiq-e&quot;);
+              "
+            ></div>
+            <div class="absolute inset-0 bg-black/60"></div>
+          </div>
+          <div class="relative z-10 max-w-2xl text-white">
+            <h1 class="font-display-xl text-display-xl mb-md">
+              Street Meets Elite
+            </h1>
+            <p class="font-body-lg text-body-lg mb-xl opacity-90">
+              Where high-fashion luxury meets high-performance street utility.
+            </p>
+            <button
+              class="bg-white text-black px-xl py-4 rounded-lg font-label-md text-label-md uppercase tracking-widest hover:bg-on-secondary-fixed transition-colors active:scale-95"
+            >
+              Explore Collection
+            </button>
+          </div>
+        </div>
+      </div>
+      <!-- Slider Controls -->
+      <div class="absolute bottom-xl left-margin_desktop flex gap-md z-20">
+        <button
+          class="w-12 h-1 bg-white/30 hover:bg-white transition-all cursor-pointer hero-indicator active"
+          onclick="moveHero(0)"
+        ></button>
+        <button
+          class="w-12 h-1 bg-white/30 hover:bg-white transition-all cursor-pointer hero-indicator"
+          onclick="moveHero(1)"
+        ></button>
+        <button
+          class="w-12 h-1 bg-white/30 hover:bg-white transition-all cursor-pointer hero-indicator"
+          onclick="moveHero(2)"
+        ></button>
+      </div>
+    </section>
+    <!-- Shop by Category (Bento Grid) -->
+    <section class="py-xl px-margin_desktop">
+      <h2 class="font-headline-lg text-headline-lg mb-xl">Shop the Universe</h2>
+      <div class="grid grid-cols-12 grid-rows-2 gap-gutter h-[800px]">
+        <div
+          class="col-span-8 row-span-2 group overflow-hidden rounded-xl relative cursor-pointer"
+        >
+          <div
+            class="w-full h-full bg-cover bg-center transition-transform duration-700 group-hover:scale-105"
+            data-alt="A powerful shot of a male athlete sprinting on an indoor track. High-speed photography captures the motion blur and the intensity of the run. Focus is sharp on his state-of-the-art running shoes. The lighting is dramatic, professional stadium lighting with high-contrast shadows."
+            style="
+              background-image: url(&quot;https://lh3.googleusercontent.com/aida-public/AB6AXuCuB5VL0383FYYLIasNwzXt9s8ItA85haJ4FXqWcVVrdaBCTohmnbSSTjS9D2A-YYllrjahpL6o_wavAuFZzGGN5mL1mWQk-rF1aVnKk1iOZSPScYRCcZIMXDmQjIVF3ZTdzArCdT-Qz-aBBBWokCh1LBwd50yqQp-SxNyirKUYaHIE8mg4s8UnJ7vFp4AMFLrJeroo_XFlKq1tAtvnn53-N-FyQq6X4jHsuXO8bUhOsuOacxrqGppY&quot;);
+            "
+          ></div>
+          <div class="absolute bottom-lg left-lg">
+            <h3 class="text-white font-display-xl text-headline-lg mb-2">
+              Men
+            </h3>
+            <p
+              class="text-white/80 font-label-md text-label-md uppercase tracking-widest group-hover:translate-x-2 transition-transform"
+            >
+              Explore Performance
+              <span class="material-symbols-outlined align-middle"
+                >arrow_forward</span
+              >
+            </p>
+          </div>
+        </div>
+        <div
+          class="col-span-4 row-span-1 group overflow-hidden rounded-xl relative cursor-pointer"
+        >
+          <div
+            class="w-full h-full bg-cover bg-center transition-transform duration-700 group-hover:scale-105"
+            data-alt="A high-fashion shot of a woman in minimalist athletic wear practicing yoga in a bright, airy loft studio. The lighting is soft and natural. The focus is on her sleek, contemporary sneakers that blend fashion and function perfectly. The color palette is composed of soft pastels and clean whites."
+            style="
+              background-image: url(&quot;https://lh3.googleusercontent.com/aida-public/AB6AXuCcMPK2NDI0YCYh9aSCOfr8DCuyWuVpN8pDq9BlX9OHjB9A7Hw7_OfdTM5gV6dZ56jbQ6teXT2qowHo4Hrxy2R3lk4AB2g1hHwH2qAj87MiCx_pYQ95T70VozMjNcie8GhGdldwLFljEflcb0selFRPuJ2rZajb_gH9kL2TMZlsgf3kyMkIz0lEfVQo-126xrcUG6galvaADGCW3tQszLVAEPXutP82_ehg6VZPgW3ZCqDb8e2ryepB&quot;);
+            "
+          ></div>
+          <div class="absolute bottom-md left-md">
+            <h3 class="text-white font-headline-md text-headline-md mb-1">
+              Women
+            </h3>
+            <p
+              class="text-white/80 font-label-md text-label-md uppercase tracking-widest group-hover:translate-x-2 transition-transform"
+            >
+              Discover Collection
+              <span class="material-symbols-outlined align-middle"
+                >arrow_forward</span
+              >
+            </p>
+          </div>
+        </div>
+        <div
+          class="col-span-2 row-span-1 group overflow-hidden rounded-xl relative cursor-pointer"
+        >
+          <div
+            class="w-full h-full bg-cover bg-center transition-transform duration-700 group-hover:scale-105"
+            data-alt="Close-up of vibrant, colorful children's sneakers jumping onto a concrete surface. The shot is dynamic and playful, filled with energy. Bright colors like neon yellow and blue pop against the gray urban background. The mood is joyful and energetic."
+            style="
+              background-image: url(&quot;https://lh3.googleusercontent.com/aida-public/AB6AXuC91CPRD3jLReH6aMcAo9ic9bgIXGOJBTz1Mpc1vGKivAja5P3NmVthccYsNSA-dUVCBuDTgOrcdnXr55haBwCg0ncGDXrPu18ymISzIKeMrCDUtmumfuVDwIy4xS8tfqG8_S75QNSfLFeM3jmR-jtm3n_lhB9xLgMS0MTV2XKGdqvQxP0WgP5A_oOcp2q1MwdweaDOgKH4PKEGAE2ISNU-L2SJVhYacUlhEEe7aUKJalahW6GH_XZk&quot;);
+            "
+          ></div>
+          <div class="absolute bottom-md left-md">
+            <h3 class="text-white font-headline-md text-headline-md">Kids</h3>
+          </div>
+        </div>
+        <div
+          class="col-span-2 row-span-1 group overflow-hidden rounded-xl relative cursor-pointer"
+        >
+          <div
+            class="w-full h-full bg-cover bg-center transition-transform duration-700 group-hover:scale-105"
+            data-alt="Close-up detail of a basketball hitting a hardwood court floor next to a professional basketball shoe. The lighting is warm and golden, highlighting the grip and grain of the leather. The environment is a professional basketball arena, emphasizing high-performance sports equipment."
+            style="
+              background-image: url(&quot;https://lh3.googleusercontent.com/aida-public/AB6AXuBTTUflhMnEfAyMuqtEY8FVt3b67y09rjKscyg8Mu_RRi_6zGvthcaV3AfWuzcT92t1ySGPjQ-3HGZFuZ2CufFB8Cnkct4Cj-lFPWwZ-sgLNGUV9DuquGiaCWwb9xCV5qwStRmBiuhixmzg67VsW8rqnY9D8O-Hyc-Wpsv1hu-VBpCoSyt9IPpeoJPmTXiZsVji0H_qmDQ4FbZpQYJeUSYo2fCiYo2gGrHRTXBgj5nS3FGqNDaXcdLX&quot;);
+            "
+          ></div>
+          <div class="absolute bottom-md left-md">
+            <h3 class="text-white font-headline-md text-headline-md">Sports</h3>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Featured Products -->
+    <section class="py-xl bg-surface-container-lowest">
+      <div class="px-margin_desktop flex justify-between items-end mb-xl">
+        <div>
+          <span
+            class="text-on-tertiary-container font-label-md text-label-md uppercase tracking-widest"
+            >The Best of StepUp</span
+          >
+          <h2 class="font-headline-lg text-headline-lg mt-2">
+            Best Sellers &amp; New Arrivals
+          </h2>
+        </div>
+        <div class="flex gap-md">
+          <button
+            class="w-12 h-12 rounded-full border border-outline-variant flex items-center justify-center hover:bg-primary hover:text-white transition-all"
+          >
+            <span class="material-symbols-outlined">chevron_left</span>
+          </button>
+          <button
+            class="w-12 h-12 rounded-full border border-outline-variant flex items-center justify-center hover:bg-primary hover:text-white transition-all"
+          >
+            <span class="material-symbols-outlined">chevron_right</span>
+          </button>
+        </div>
+      </div>
+      <div class="px-margin_desktop grid grid-cols-4 gap-gutter">
+        <!-- Product 1 -->
+        <div class="group cursor-pointer">
+          <div
+            class="relative aspect-square bg-[#F8FAFC] rounded-lg mb-md flex items-center justify-center overflow-hidden"
+          >
+            <div
+              class="w-[80%] h-[80%] bg-contain bg-center bg-no-repeat transition-transform group-hover:scale-110"
+              data-alt="A clean product shot of a minimalist white leather trainer with a subtle black logo on the side. The shoe is angled to show its profile against a light gray seamless background. The lighting is soft and even, highlighting the premium quality of the leather and the precise stitching."
+              style="
+                background-image: url(&quot;https://lh3.googleusercontent.com/aida-public/AB6AXuBFEgRdrEmEt2WBRVvFoZFtZ7IqD7OQ1NPcqDgDtzGQZFdX6fDBGVxbb-P150u-W7IU_4q_j4h9qwip-d-LCcRyjj6vhB0UvzdsR3F6s3TEnWGkZG5PYQTeWBBzS7sLFpsA-HSeLT7fVoYOJWcw6BECxK1Ruw_ylQqgY5ovcZe6oM17MBK35e_VEr5YsbcEw6VQHZhXGSd3_8ybaSnFMGoh6rYKXQl3jb3m6syZoVk1fgvoFgmwsQHe&quot;);
+              "
+            ></div>
+            <span
+              class="absolute top-4 left-4 bg-primary text-on-primary px-3 py-1 font-label-md text-[10px] uppercase tracking-widest rounded-sm"
+              >New Arrival</span
+            >
+            <button
+              class="absolute bottom-4 right-4 bg-white shadow-lg w-10 h-10 rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity"
+            >
+              <span class="material-symbols-outlined text-[20px]"
+                >add_shopping_cart</span
+              >
+            </button>
+          </div>
+          <h4 class="font-headline-md text-body-lg font-bold">
+            Apex Runner v2
+          </h4>
+          <p class="text-on-secondary-container font-body-md text-body-md mb-2">
+            Technical Running
+          </p>
+          <p class="font-bold text-primary">$180.00</p>
+        </div>
+        <!-- Product 2 -->
+        <div class="group cursor-pointer">
+          <div
+            class="relative aspect-square bg-[#F8FAFC] rounded-lg mb-md flex items-center justify-center overflow-hidden"
+          >
+            <div
+              class="w-[80%] h-[80%] bg-contain bg-center bg-no-repeat transition-transform group-hover:scale-110"
+              data-alt="A detailed studio photograph of a professional basketball shoe in a bold red and black colorway. The shoe features high-tech mesh panels and a chunky responsive sole. It is shown floating against a clean studio background, with sharp shadows adding depth. The style is modern and aggressive."
+              style="
+                background-image: url(&quot;https://lh3.googleusercontent.com/aida-public/AB6AXuDiOyO_0MPOZUjwDmJX5RwlfiB1ybPtPYehm1TING1Bhd-Pb8ko_LXdf--XZj_VzK7uR8bA0d9F70v3KV9N17whEEilxZD1UampbEB800WvVlqPLt88sdyhP59JEvirWvaLbQrkHerXLdBCMg2Yrbbvc4J7t_DpOABZEQ06lfZWRwCA56wRYTKHOv5BAYo51gzrUyLCAWPpF3GCiyyefO38vD2hcSGLy7yNVs-xp5zH-zQh0TrwzpJW&quot;);
+              "
+            ></div>
+            <span
+              class="absolute top-4 left-4 bg-on-tertiary-container text-white px-3 py-1 font-label-md text-[10px] uppercase tracking-widest rounded-sm"
+              >Hot</span
+            >
+            <button
+              class="absolute bottom-4 right-4 bg-white shadow-lg w-10 h-10 rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity"
+            >
+              <span class="material-symbols-outlined text-[20px]"
+                >add_shopping_cart</span
+              >
+            </button>
+          </div>
+          <h4 class="font-headline-md text-body-lg font-bold">
+            Orbit Hoop High
+          </h4>
+          <p class="text-on-secondary-container font-body-md text-body-md mb-2">
+            Basketball Elite
+          </p>
+          <p class="font-bold text-primary">$210.00</p>
+        </div>
+        <!-- Product 3 -->
+        <div class="group cursor-pointer">
+          <div
+            class="relative aspect-square bg-[#F8FAFC] rounded-lg mb-md flex items-center justify-center overflow-hidden"
+          >
+            <div
+              class="w-[80%] h-[80%] bg-contain bg-center bg-no-repeat transition-transform group-hover:scale-110"
+              data-alt="A studio product shot of a sleek, all-black lifestyle trainer. The design is seamless and futuristic with matte and gloss black textures. It is positioned on a reflective surface against a dark gray background, emphasizing its stealthy and premium aesthetic. The lighting creates subtle highlights on its contours."
+              style="
+                background-image: url(&quot;https://lh3.googleusercontent.com/aida-public/AB6AXuBk0wCyycW4PPDFDmIKn61YmuEw_ZospQt0ZmQ3alvdYgZyknONhZNZ0yEpVSY-PsScywxUJM2fuTuwll17blGViwoaWOMJeTxaQ7G8oHRf9uYYLFDj-J6zXGxLYSh6ZPzSEZcnz2_iUJzmRuvJ09fNWGkO90yAJgwpOwwtuHqk7UkCq4_-qMM_rVKQaNdU7Y-57K6l8TQE_ioI-xGc-5gQSHupASiJ3cS02VPnXeIHmvaJmPpsGYmA&quot;);
+              "
+            ></div>
+            <button
+              class="absolute bottom-4 right-4 bg-white shadow-lg w-10 h-10 rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity"
+            >
+              <span class="material-symbols-outlined text-[20px]"
+                >add_shopping_cart</span
+              >
+            </button>
+          </div>
+          <h4 class="font-headline-md text-body-lg font-bold">
+            Noir Stealth Low
+          </h4>
+          <p class="text-on-secondary-container font-body-md text-body-md mb-2">
+            Urban Lifestyle
+          </p>
+          <p class="font-bold text-primary">$165.00</p>
+        </div>
+        <!-- Product 4 -->
+        <div class="group cursor-pointer">
+          <div
+            class="relative aspect-square bg-[#F8FAFC] rounded-lg mb-md flex items-center justify-center overflow-hidden"
+          >
+            <div
+              class="w-[80%] h-[80%] bg-contain bg-center bg-no-repeat transition-transform group-hover:scale-110"
+              data-alt="A minimalist photograph of a classic vulcanized canvas sneaker in a soft cream color. The shoe is presented in a bright, high-key studio environment with soft natural-looking lighting. It evokes a sense of timeless simplicity and casual comfort. The textures of the canvas and rubber are clearly visible."
+              style="
+                background-image: url(&quot;https://lh3.googleusercontent.com/aida-public/AB6AXuDyI3tfmuz4bRz_tpw0vOAwEcnMGO-WmerM_Qw8nvcumB737VsygTi8COhGG2bpzGSMeABJv72HI8mveoRzA_7g-0uaT_1bB7Va0490pqwj_lAdyxLYsgdxOgM4hM_QNoo5dl-_9SqiPUuTGcS4yOe0RQZ1BqdjEwMRQf42cAQeU79mibvxfD3MSGjKmEMUDwD02Hp_li-vC1UhmVPskWnxBXjMU7vj5J-NYyRkh1XkbbcJqPGay8rn&quot;);
+              "
+            ></div>
+            <button
+              class="absolute bottom-4 right-4 bg-white shadow-lg w-10 h-10 rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity"
+            >
+              <span class="material-symbols-outlined text-[20px]"
+                >add_shopping_cart</span
+              >
+            </button>
+          </div>
+          <h4 class="font-headline-md text-body-lg font-bold">
+            Canvas Classic
+          </h4>
+          <p class="text-on-secondary-container font-body-md text-body-md mb-2">
+            Everyday Wear
+          </p>
+          <p class="font-bold text-primary">$85.00</p>
+        </div>
+      </div>
+    </section>
+    <!-- AI Recommendation Section -->
+    <section class="py-xl px-margin_desktop bg-surface">
+      <div class="flex items-center gap-sm mb-xl">
+        <span
+          class="material-symbols-outlined text-on-tertiary-container"
+          style="font-variation-settings: &quot;FILL&quot; 1"
+          >auto_awesome</span
+        >
+        <h2 class="font-headline-lg text-headline-lg">Picked For You</h2>
+        <div
+          class="ml-auto flex items-center gap-2 px-4 py-1 rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-label-md text-label-md"
+        >
+          <span
+            class="w-2 h-2 rounded-full bg-on-tertiary-container animate-pulse"
+          ></span>
+          AI Personalized
+        </div>
+      </div>
+      <div class="grid grid-cols-4 gap-gutter">
+        <!-- AI Product Card -->
+        <div
+          class="relative p-xs rounded-xl border border-on-tertiary-container/30 ai-glow group transition-all hover:-translate-y-2"
+        >
+          <div class="bg-surface rounded-lg p-md">
+            <div
+              class="w-full aspect-square bg-contain bg-center bg-no-repeat mb-md"
+              data-alt="A futuristic product shot of a silver and neon orange training shoe. The shoe features a transparent mid-sole revealing high-tech cushioning elements. The lighting is dynamic, with sharp neon orange glows reflecting off the silver surfaces. It looks incredibly lightweight and technologically advanced."
+              style="
+                background-image: url(&quot;https://lh3.googleusercontent.com/aida-public/AB6AXuAWSYTy3Jk4n501ev7E5uXMgRbDvnmZ8y4Cc5C70b2fp0jIrWwKLWj0Q3iLzjkch4GaSCWJzYtL6hkLdVSVLneIAUOR0aFxU4HfSbZF5zxQCSDHhQbiE6Noqh_U7VENtH3BxPp_a7HBKyOnlJLe42ww07yexdzl_fhFeEwTQl48oxFUs9Rm0l1IbszVASjoEQgyQNpO0jN6sSYFoYME_ZRC0nHCJyZH0KSzE98SR4lnf_yx1ruivfc7&quot;);
+              "
+            ></div>
+            <h4 class="font-headline-md text-body-lg font-bold">
+              Velocity AI-1
+            </h4>
+            <p
+              class="text-on-secondary-container font-body-md text-body-md mb-4 text-xs italic"
+            >
+              98% Match based on your profile
+            </p>
+            <div class="flex justify-between items-center">
+              <span class="font-bold text-primary">$220.00</span>
+              <button
+                class="bg-primary text-on-primary p-2 rounded-lg hover:bg-on-tertiary-container transition-colors"
+              >
+                <span class="material-symbols-outlined text-[18px]">bolt</span>
+              </button>
+            </div>
+          </div>
+          <div
+            class="absolute -top-3 left-1/2 -translate-x-1/2 bg-on-tertiary-container text-white px-4 py-0.5 rounded-full text-[10px] font-bold uppercase tracking-widest whitespace-nowrap"
+          >
+            Best Match
+          </div>
+        </div>
+        <!-- Repeated for 3 more AI products -->
+        <div
+          class="relative p-xs rounded-xl border border-on-tertiary-container/10 group transition-all hover:-translate-y-2 hover:border-on-tertiary-container/30"
+        >
+          <div class="bg-surface rounded-lg p-md">
+            <div
+              class="w-full aspect-square bg-contain bg-center bg-no-repeat mb-md"
+              data-alt="A studio product shot of a high-performance running shoe with a carbon fiber plate visible in the sole. The colorway is a gradient of electric blue to deep purple. The shoe is presented in a dark, atmospheric setting with laser-like thin blue light beams cutting across the frame."
+              style="
+                background-image: url(&quot;https://lh3.googleusercontent.com/aida-public/AB6AXuBGw1h9A-lXD6C_SIrxkv3I0x2qZeDmurY_Vi590q8uNpxdHF_bvNq42mffcLCkvALiv6GYMasscGzAftvYUMz5oNGxDPB26kNCb_mORF5AmWzpuLC0oD4g8uki0DNwEplPQLKpHs0Ao3ujO14rTXxvrbUAF0jdqPXJ8gRbT38S3Ian_RaKA84r3nZ6j4FXILEZGdujI_9Hhzlezr99achq8RUvJX3PRIBs2x1G7GCKjCc8cTcRdT1F&quot;);
+              "
+            ></div>
+            <h4 class="font-headline-md text-body-lg font-bold">
+              Carbon Pulse X
+            </h4>
+            <p
+              class="text-on-secondary-container font-body-md text-body-md mb-4 text-xs italic"
+            >
+              94% Match for your run style
+            </p>
+            <div class="flex justify-between items-center">
+              <span class="font-bold text-primary">$195.00</span>
+              <button
+                class="bg-primary text-on-primary p-2 rounded-lg hover:bg-on-tertiary-container transition-colors"
+              >
+                <span class="material-symbols-outlined text-[18px]">bolt</span>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div
+          class="relative p-xs rounded-xl border border-on-tertiary-container/10 group transition-all hover:-translate-y-2 hover:border-on-tertiary-container/30"
+        >
+          <div class="bg-surface rounded-lg p-md">
+            <div
+              class="w-full aspect-square bg-contain bg-center bg-no-repeat mb-md"
+              data-alt="A clean product shot of an all-white breathable mesh running sneaker. The design is extremely lightweight and airy. The photograph uses a bright, high-key aesthetic with soft shadows, emphasizing the comfort and breathability of the materials. It's positioned at a 45-degree angle."
+              style="
+                background-image: url(&quot;https://lh3.googleusercontent.com/aida-public/AB6AXuAliop-VjLjvS_GABPSk-pkkShht2HWKF7NRfaFbigtc2ob5I5AG-olIBkqqihObB38uYPKwL1lzwwZC8VXtCaEsJ4p7ZTe2pd20Xm_4GKWJca3q_ZsuYN2ju8pHGqFBCXEeyyn_gBQhkZPO968oBPrGE67wYLa-2Mi0v90bg6S-Q4sSBTh8MYKhsKiIkSwxOgenuBRF57Bse32bNvVzFyx2qr0mwIvqjKOhI9R7CW6KyvM_QKjp9gN&quot;);
+              "
+            ></div>
+            <h4 class="font-headline-md text-body-lg font-bold">Aero Breeze</h4>
+            <p
+              class="text-on-secondary-container font-body-md text-body-md mb-4 text-xs italic"
+            >
+              Recommended for Recovery
+            </p>
+            <div class="flex justify-between items-center">
+              <span class="font-bold text-primary">$140.00</span>
+              <button
+                class="bg-primary text-on-primary p-2 rounded-lg hover:bg-on-tertiary-container transition-colors"
+              >
+                <span class="material-symbols-outlined text-[18px]">bolt</span>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div
+          class="relative p-xs rounded-xl border border-on-tertiary-container/10 group transition-all hover:-translate-y-2 hover:border-on-tertiary-container/30"
+        >
+          <div class="bg-surface rounded-lg p-md">
+            <div
+              class="w-full aspect-square bg-contain bg-center bg-no-repeat mb-md"
+              data-alt="A high-contrast photograph of a chunky, designer trail running shoe. The shoe features rugged lugs on the sole and a technical upper with multiple textures in earth tones like olive green and slate gray. The lighting is dramatic, suggesting an outdoor, rugged environment."
+              style="
+                background-image: url(&quot;https://lh3.googleusercontent.com/aida-public/AB6AXuC2g3EuokCMpxqRJ8VL4sMRQQsZN9pdndSyGmUuSsPp42zSEhQgE3yOtqRe7ZorO1jrVdWfh_ptF35-fKEZdHwRTG5BBcXQ1hGPlV4-vLuXf8HwsWVEnPk8blrC8RtKoJrxl8fRZ9sjQ_1T41E6x7H1GNdy0d726xcZGdUkMTFpGdUQnPhU9zMJlNSuioo0gohb2mncDksl_18q8mfQNMv0YemyoPtnwB3CoXbYVz9WBDkQqqxeRu_9&quot;);
+              "
+            ></div>
+            <h4 class="font-headline-md text-body-lg font-bold">
+              Terra Forge Pro
+            </h4>
+            <p
+              class="text-on-secondary-container font-body-md text-body-md mb-4 text-xs italic"
+            >
+              Perfect for your terrain
+            </p>
+            <div class="flex justify-between items-center">
+              <span class="font-bold text-primary">$175.00</span>
+              <button
+                class="bg-primary text-on-primary p-2 rounded-lg hover:bg-on-tertiary-container transition-colors"
+              >
+                <span class="material-symbols-outlined text-[18px]">bolt</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Limited Time Sale Section -->
+    <section class="bg-primary text-on-primary py-xl">
+      <div class="px-margin_desktop grid grid-cols-2 items-center gap-xl">
+        <div>
+          <h2
+            class="font-display-xl text-headline-lg-mobile md:text-display-xl mb-md"
+          >
+            FLASH SALE: <span class="text-on-tertiary-container">SPEED20</span>
+          </h2>
+          <div class="flex gap-lg mb-xl">
+            <div class="text-center">
+              <div class="text-headline-lg font-black" id="timer-h">02</div>
+              <div class="font-label-md text-xs opacity-60 uppercase">
+                Hours
+              </div>
+            </div>
+            <div class="text-center">
+              <div class="text-headline-lg font-black" id="timer-m">44</div>
+              <div class="font-label-md text-xs opacity-60 uppercase">Mins</div>
+            </div>
+            <div class="text-center">
+              <div class="text-headline-lg font-black" id="timer-s">59</div>
+              <div class="font-label-md text-xs opacity-60 uppercase">Secs</div>
+            </div>
+          </div>
+          <button
+            class="bg-on-tertiary-container text-white px-xl py-4 rounded-lg font-label-md text-label-md uppercase tracking-widest hover:opacity-90 transition-opacity"
+          >
+            Shop the Sale
+          </button>
+        </div>
+        <div class="grid grid-cols-2 gap-md">
+          <div class="bg-surface/5 p-md rounded-xl backdrop-blur-sm">
+            <div
+              class="w-full aspect-square bg-contain bg-center bg-no-repeat mb-sm"
+              data-alt="A stylish low-profile sneaker in a bright neon yellow colorway. The shoe is presented in a sharp studio environment with a deep charcoal background that makes the neon color pop intensely. The lighting is cinematic, with hard shadows and bright specular highlights on the technical fabric."
+              style="
+                background-image: url(&quot;https://lh3.googleusercontent.com/aida-public/AB6AXuCgaSdenoULL1Z1Qd1elX-_lUM61EWQG2wHCZuMzxGtRQr4easCxIcUtlzm7xk5zziO1jZXMZA92RTkRjFZLY4KcKGo7s-LRSBlfCWbr3LCunLb6LHrHVbpRFFJp5Vuh0Rb6Ohor2Bzg2Q1qlIBBRR76oAVdBV7oFI0FgW-NJjPfuMusSwbzldpiCB7alIlnJb_kDBNibRLRweRxsvzedAl00LiZsjsu4mh0WId-ccC-sOKuSAoWfBa&quot;);
+              "
+            ></div>
+            <p class="font-bold">Neon Swift</p>
+            <p class="text-on-tertiary-container font-black">
+              $79.00
+              <span class="text-white/40 line-through text-xs ml-2"
+                >$130.00</span
+              >
+            </p>
+          </div>
+          <div class="bg-surface/5 p-md rounded-xl backdrop-blur-sm">
+            <div
+              class="w-full aspect-square bg-contain bg-center bg-no-repeat mb-sm"
+              data-alt="A technical hiking boot sneaker hybrid in a deep forest green and tan color palette. The shoe features heavy-duty metallic lace loops and a thick, textured sole for traction. The lighting is soft and moody, evoking a sense of outdoor adventure and durability."
+              style="
+                background-image: url(&quot;https://lh3.googleusercontent.com/aida-public/AB6AXuCHAd8T_fjGkOGTJRr4Dwtzavy1NQY-pZpRxfwQAL8jBT0GzwQWN4uwA3ezgVpo8XhXRmredWy49kIn4qQ2nRdZisAAVlz28Eb37SbYSDjcBYjTD_GxRzWVWkH-wRt4pbMKu8KRCuyFMcH40JLKmh-sizD1prauQzRIsJUAQLR_wk5b3Aek2UPa4Cp33KIkEhsFYDOjwtdZMkGS1CpAApZFSAC5YxnO0dVHsBCn7P75Y3xLkgsNG8Kd&quot;);
+              "
+            ></div>
+            <p class="font-bold">Trail Blazer</p>
+            <p class="text-on-tertiary-container font-black">
+              $109.00
+              <span class="text-white/40 line-through text-xs ml-2"
+                >$165.00</span
+              >
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Customer Reviews -->
+    <section class="py-xl px-margin_desktop bg-surface-container-lowest">
+      <h2 class="font-headline-lg text-headline-lg text-center mb-xl">
+        The Elite Community
+      </h2>
+      <div class="grid grid-cols-3 gap-xl">
+        <div class="p-xl border border-outline-variant/30 rounded-xl relative">
+          <span
+            class="material-symbols-outlined text-on-tertiary-container absolute -top-4 left-xl bg-white p-2"
+            >format_quote</span
+          >
+          <p class="font-body-lg text-body-lg italic mb-lg">
+            "The AI fitting was surprisingly accurate. I've never had a pair of
+            trainers feel this natural right out of the box. StepUp is changing
+            the game."
+          </p>
+          <div class="flex items-center gap-md">
+            <div
+              class="w-12 h-12 rounded-full overflow-hidden bg-outline-variant"
+            >
+              <div
+                class="w-full h-full bg-cover"
+                data-alt="A professional headshot of a young male athlete in sports gear, looking confidently at the camera. The background is a blurred athletic facility. The lighting is professional and clean, emphasizing a modern and energetic lifestyle."
+                style="
+                  background-image: url(&quot;https://lh3.googleusercontent.com/aida-public/AB6AXuClGRgyWoFw1j_Xf1Fz_vjp56k5OQivqoXn6BdCVKoTO0cT8gDZf-RRhX7KjxGw4K5obFKS5J0-fcd9_paeT8Gq_Ei9POKaQ4RxMI4_SZB5AjlSU76khvhZvXqfF9R5YmqvHF-xqN6ta4OUqwlaENoSBVVCR-04Lzm-vge6aZ1GOmiI6rK9POcLNmZBku44GDb0RnTef6S47XNTI3iKUu8YyR5-UuGxMcecE6L8RciOz7WJgxe6l0wO&quot;);
+                "
+              ></div>
+            </div>
+            <div>
+              <p class="font-bold">Marcus Chen</p>
+              <p class="text-xs text-on-secondary-container">Marathon Runner</p>
+            </div>
+          </div>
+        </div>
+        <div class="p-xl border border-outline-variant/30 rounded-xl relative">
+          <span
+            class="material-symbols-outlined text-on-tertiary-container absolute -top-4 left-xl bg-white p-2"
+            >format_quote</span
+          >
+          <p class="font-body-lg text-body-lg italic mb-lg">
+            "Fashion meets absolute performance. I wear my Orbit Highs for
+            training and then straight to meetings. Incredible quality and
+            aesthetic."
+          </p>
+          <div class="flex items-center gap-md">
+            <div
+              class="w-12 h-12 rounded-full overflow-hidden bg-outline-variant"
+            >
+              <div
+                class="w-full h-full bg-cover"
+                data-alt="A stylish portrait of a woman in her 30s with a creative and professional aesthetic. She has a minimalist and modern style. The lighting is soft and flattering, with a clean architectural background in neutral tones."
+                style="
+                  background-image: url(&quot;https://lh3.googleusercontent.com/aida-public/AB6AXuDmdOOh7zUpw4MyCKzrsMboLrOiAId7kZOegFt6MrYRtdXrD8SmPH1ZDvWuiyQLoceFE6nDoWaZ78NL4fyZaXNzTyeLdFKJ1fQ0T0zdNGNpSSGAi2sHnxGd1-qb4AKzRdzg2aelnb_QnT-gLKWTwHSpN8uEwE7ogm1N5k-r3SKZRY_DDzCGBSpeGRl6Ljdvlaqfkw3VoJHVfgAxkmc4oPj61_gv1FAGvfgLeiTP_oTYq5KpwXvzHhMm&quot;);
+                "
+              ></div>
+            </div>
+            <div>
+              <p class="font-bold">Elena Rodriguez</p>
+              <p class="text-xs text-on-secondary-container">
+                Creative Director
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="p-xl border border-outline-variant/30 rounded-xl relative">
+          <span
+            class="material-symbols-outlined text-on-tertiary-container absolute -top-4 left-xl bg-white p-2"
+            >format_quote</span
+          >
+          <p class="font-body-lg text-body-lg italic mb-lg">
+            "I was skeptical about AI choosing my shoes, but the data don't lie.
+            My recovery times have improved significantly with the Velocity
+            series."
+          </p>
+          <div class="flex items-center gap-md">
+            <div
+              class="w-12 h-12 rounded-full overflow-hidden bg-outline-variant"
+            >
+              <div
+                class="w-full h-full bg-cover"
+                data-alt="A portrait of a male fitness trainer in an urban gym setting. He is wearing high-performance athletic apparel. The lighting is dramatic and moody, emphasizing strength and dedication. The atmosphere is professional and high-energy."
+                style="
+                  background-image: url(&quot;https://lh3.googleusercontent.com/aida-public/AB6AXuDPRvhBjo81BzsamkfdlrZDy9zRDfQdB3jQD_Tr1p3QvthTHAcqv2S9QcwgY4FilzRmwVHixSBLt_9HNKXaXAOsXBqdk2nbbTxiMylLi5BNVjA2X8DPZ-MV-TOy2EsehzelqnyYpznxQHZZTPCk56PrjAPlnTBxNj9nPgWCjSbefX74eDDXzfU2y4n1QiVmwIHYo-dq8iBHmQuJv-o9S3o9RVOFccRXTUtjs_iRoBti_uoeDaEBrEz7&quot;);
+                "
+              ></div>
+            </div>
+            <div>
+              <p class="font-bold">Jameson Wu</p>
+              <p class="text-xs text-on-secondary-container">
+                Performance Coach
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Brand Partners -->
+    <section class="py-xl border-y border-outline-variant/20 overflow-hidden">
+      <div class="flex animate-scroll whitespace-nowrap">
+        <div
+          class="flex gap-xl items-center px-xl grayscale opacity-40 hover:grayscale-0 hover:opacity-100 transition-all cursor-default"
+        >
+          <span class="font-display-xl text-headline-lg font-black">NIKE</span>
+          <span class="font-display-xl text-headline-lg font-black"
+            >ADIDAS</span
+          >
+          <span class="font-display-xl text-headline-lg font-black">PUMA</span>
+          <span class="font-display-xl text-headline-lg font-black">ASICS</span>
+          <span class="font-display-xl text-headline-lg font-black"
+            >NEW BALANCE</span
+          >
+          <span class="font-display-xl text-headline-lg font-black"
+            >REEBOK</span
+          >
+          <span class="font-display-xl text-headline-lg font-black"
+            >MIZUNO</span
+          >
+        </div>
+        <div
+          class="flex gap-xl items-center px-xl grayscale opacity-40 hover:grayscale-0 hover:opacity-100 transition-all cursor-default"
+        >
+          <span class="font-display-xl text-headline-lg font-black">NIKE</span>
+          <span class="font-display-xl text-headline-lg font-black"
+            >ADIDAS</span
+          >
+          <span class="font-display-xl text-headline-lg font-black">PUMA</span>
+          <span class="font-display-xl text-headline-lg font-black">ASICS</span>
+          <span class="font-display-xl text-headline-lg font-black"
+            >NEW BALANCE</span
+          >
+          <span class="font-display-xl text-headline-lg font-black"
+            >REEBOK</span
+          >
+          <span class="font-display-xl text-headline-lg font-black"
+            >MIZUNO</span
+          >
+        </div>
+      </div>
+    </section>
+    <!-- Newsletter -->
+    <section class="py-xl px-margin_desktop bg-surface text-center">
+      <div class="max-w-2xl mx-auto">
+        <h2 class="font-headline-lg text-headline-lg mb-sm">Join the Elite</h2>
+        <p class="font-body-lg text-body-lg text-on-secondary-container mb-xl">
+          Get early access to drops, exclusive AI insights, and professional
+          training tips.
+        </p>
+        <form class="flex gap-sm">
+          <input
+            class="flex-1 bg-surface-container border-none rounded-lg px-6 py-4 focus:ring-2 focus:ring-primary outline-none"
+            placeholder="Enter your email"
+            type="email"
+          />
+          <button
+            class="bg-primary text-on-primary px-lg py-4 rounded-lg font-label-md text-label-md uppercase tracking-widest hover:opacity-90 active:scale-95 transition-all"
+          >
+            Subscribe
+          </button>
+        </form>
+      </div>
+    </section>
+    <!-- Footer (Shared Component) -->
+    <footer
+      class="w-full py-xl bg-primary dark:bg-surface-container-lowest text-on-primary dark:text-on-surface"
+    >
+      <div class="px-margin_desktop grid grid-cols-12 gap-gutter">
+        <div class="col-span-12 md:col-span-4">
+          <h3
+            class="text-on-primary font-black font-display-xl text-headline-md mb-md"
+          >
+            StepUp
+          </h3>
+          <p class="font-body-md text-body-md opacity-60 mb-xl max-w-xs">
+            Pioneering the intersection of artificial intelligence and
+            high-performance footwear since 2024.
+          </p>
+        </div>
+        <div
+          class="col-span-12 md:col-span-8 flex flex-wrap justify-between gap-xl"
+        >
+          <div class="flex flex-col gap-md">
+            <h4
+              class="font-label-md text-label-md uppercase tracking-widest text-on-tertiary-container"
+            >
+              Support
+            </h4>
+            <a
+              class="font-body-md text-body-md text-on-primary/60 dark:text-on-surface-variant hover:text-on-primary dark:hover:text-primary transition-colors"
+              href="#"
+              >Help Center</a
+            >
+            <a
+              class="font-body-md text-body-md text-on-primary/60 dark:text-on-surface-variant hover:text-on-primary dark:hover:text-primary transition-colors"
+              href="#"
+              >Shipping</a
+            >
+            <a
+              class="font-body-md text-body-md text-on-primary/60 dark:text-on-surface-variant hover:text-on-primary dark:hover:text-primary transition-colors"
+              href="#"
+              >Returns</a
+            >
+          </div>
+          <div class="flex flex-col gap-md">
+            <h4
+              class="font-label-md text-label-md uppercase tracking-widest text-on-tertiary-container"
+            >
+              Company
+            </h4>
+            <a
+              class="font-body-md text-body-md text-on-primary/60 dark:text-on-surface-variant hover:text-on-primary dark:hover:text-primary transition-colors"
+              href="#"
+              >Sustainability</a
+            >
+            <a
+              class="font-body-md text-body-md text-on-primary/60 dark:text-on-surface-variant hover:text-on-primary dark:hover:text-primary transition-colors"
+              href="#"
+              >Stores</a
+            >
+            <a
+              class="font-body-md text-body-md text-on-primary/60 dark:text-on-surface-variant hover:text-on-primary dark:hover:text-primary transition-colors"
+              href="#"
+              >Careers</a
+            >
+          </div>
+          <div class="flex flex-col gap-md">
+            <h4
+              class="font-label-md text-label-md uppercase tracking-widest text-on-tertiary-container"
+            >
+              Membership
+            </h4>
+            <a
+              class="font-body-md text-body-md text-on-primary/60 dark:text-on-surface-variant hover:text-on-primary dark:hover:text-primary transition-colors"
+              href="#"
+              >Elite Status</a
+            >
+            <a
+              class="font-body-md text-body-md text-on-primary/60 dark:text-on-surface-variant hover:text-on-primary dark:hover:text-primary transition-colors"
+              href="#"
+              >AI Finder Pro</a
+            >
+          </div>
+        </div>
+        <div
+          class="col-span-12 border-t border-white/10 mt-xl pt-xl flex flex-col md:flex-row justify-between items-center gap-md"
+        >
+          <p class="font-body-md text-body-md opacity-40">
+            © 2024 StepUp Inc. All rights reserved. Built with Precision.
+          </p>
+          <div class="flex gap-lg">
+            <span
+              class="material-symbols-outlined cursor-pointer hover:text-on-tertiary-container transition-colors"
+              >brand_awareness</span
+            >
+            <span
+              class="material-symbols-outlined cursor-pointer hover:text-on-tertiary-container transition-colors"
+              >public</span
+            >
+            <span
+              class="material-symbols-outlined cursor-pointer hover:text-on-tertiary-container transition-colors"
+              >social_leaderboard</span
+            >
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- SideNavBar / Floating AI Chat Assistant (Shared Component) -->
+    <div
+      class="fixed right-6 bottom-24 w-16 h-16 rounded-full bg-gradient-to-br from-[#FF6B00] to-[#FF8C33] shadow-[0_10px_25px_-5px_rgba(255,107,0,0.3)] backdrop-blur-lg flex flex-col items-center justify-center z-50 cursor-pointer hover:scale-110 transition-transform duration-300 animate-pulse-slow active:scale-95 group"
+    >
+      <span
+        class="material-symbols-outlined text-white text-3xl"
+        style="font-variation-settings: &quot;FILL&quot; 1"
+        >auto_awesome</span
+      >
+      <div
+        class="absolute right-20 bg-surface dark:bg-inverse-surface py-2 px-4 rounded-lg shadow-xl opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none"
+      >
+        <p class="font-bold text-primary dark:text-white">AI Stylist</p>
+        <p class="text-xs text-on-secondary-container">Find Your Fit</p>
+      </div>
+    </div>
+    <!-- Scripts for simple functionality -->
+    <script>
+      // Hero Slider Logic
+      let currentSlide = 0;
+      const container = document.getElementById("hero-container");
+      const indicators = document.querySelectorAll(".hero-indicator");
+
+      function moveHero(index) {
+        currentSlide = index;
+        container.style.transform = `translateX(-${currentSlide * 33.333}%)`;
+        indicators.forEach((ind, i) => {
+          if (i === index) {
+            ind.classList.add("bg-white");
+            ind.classList.remove("bg-white/30");
+          } else {
+            ind.classList.remove("bg-white");
+            ind.classList.add("bg-white/30");
+          }
+        });
+      }
+
+      // Auto-slide hero
+      setInterval(() => {
+        currentSlide = (currentSlide + 1) % 3;
+        moveHero(currentSlide);
+      }, 8000);
+
+      // Simple Countdown Timer
+      function updateTimer() {
+        const h = document.getElementById("timer-h");
+        const m = document.getElementById("timer-m");
+        const s = document.getElementById("timer-s");
+
+        let seconds = parseInt(s.innerText);
+        let minutes = parseInt(m.innerText);
+        let hours = parseInt(h.innerText);
+
+        if (seconds > 0) {
+          seconds--;
+        } else {
+          seconds = 59;
+          if (minutes > 0) {
+            minutes--;
+          } else {
+            minutes = 59;
+            if (hours > 0) {
+              hours--;
+            }
+          }
+        }
+
+        h.innerText = hours.toString().padStart(2, "0");
+        m.innerText = minutes.toString().padStart(2, "0");
+        s.innerText = seconds.toString().padStart(2, "0");
+      }
+      setInterval(updateTimer, 1000);
+
+      // Intersection Observer for scroll animations
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("opacity-100", "translate-y-0");
+              entry.target.classList.remove("opacity-0", "translate-y-10");
+            }
+          });
+        },
+        { threshold: 0.1 },
+      );
+
+      document.querySelectorAll("section").forEach((section) => {
+        section.classList.add(
+          "transition-all",
+          "duration-700",
+          "opacity-0",
+          "translate-y-10",
+        );
+        observer.observe(section);
+      });
+      // Initial state for immediate visible sections
+      setTimeout(() => {
+        document
+          .querySelector("section")
+          .classList.remove("opacity-0", "translate-y-10");
+        document
+          .querySelector("section")
+          .classList.add("opacity-100", "translate-y-0");
+      }, 100);
+    </script>
+  </body>
+</html>
