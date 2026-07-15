@@ -2,13 +2,17 @@
 
 AI-Powered Premium Shoe E-commerce Platform
 
-## 🚀 Tech Stack
+## 📖 Overview
+
+StepUp AI is a modern AI-powered shoe e-commerce platform designed to deliver a premium shopping experience using AI-driven recommendations, intelligent search, and personalized assistance.
+
+## 🛠 Tech Stack
 
 ### Frontend
 - Next.js 15
 - TypeScript
 - Tailwind CSS
-- shadcn/ui
+- App Router
 
 ### Backend
 - FastAPI
@@ -23,13 +27,13 @@ AI-Powered Premium Shoe E-commerce Platform
 
 ## 📂 Project Structure
 
-```
+```text
 frontend/
 backend/
 docs/
 assets/
 ```
 
-## 📌 Status
+## 🚀 Project Status
 
-🚧 Project Initialization
+🚧 Sprint 1 — Project Foundation
